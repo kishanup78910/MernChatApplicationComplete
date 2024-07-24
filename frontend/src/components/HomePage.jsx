@@ -9,7 +9,7 @@ const HomePage = () => {
   const navigate = useNavigate();
   const logOutHandler=async()=>{
     try{
-     const res = await axios.get(`http://localhost:5000/api/v1/user/logout`);
+     const res = await axios.get(`https://mernchatapplicationcomplete.onrender.com/api/v1/user/logout`);
      toast.success(res.data.message);
  navigate('/login')
     }catch(err){
