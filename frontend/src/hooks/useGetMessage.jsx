@@ -11,7 +11,7 @@ const useGetMessage = () => {
         const fetchMessages = async () => {
             try {
                 axios.defaults.withCredentials = true;
-                const res = await axios.get(`http://localhost:5000/api/v1/message/${selectedUser._id}`);
+                const res = await axios.get(`https://mernchatapplicationcomplete.onrender.com/api/v1/message/${selectedUser._id}`);
                 console.log(res.data);
                 dispatch(setMessages(res.data|| [])); 
             } catch (err) {
